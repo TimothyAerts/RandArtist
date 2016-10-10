@@ -52,9 +52,6 @@ class RandomCloud extends RandomShape{
    @Override
    void draw (Graphics g){
        g.setColor(color);
-       for (int i=0; i<X.length; i++){
-          shape = new cloudcircle(X[i],Y[i],g);
-       }
        
    }
     }

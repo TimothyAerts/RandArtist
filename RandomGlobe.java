@@ -35,7 +35,6 @@ class RandomGlobe extends RandomShape {
         X = new int[vertexcount];
         Y = new int[vertexcount];
         double angleincrease = ((Math.PI*2)/vrtxcnt);
-        System.out.println("angleincrease origineel"  + angleincrease);
         for (int i=0; i< vertexcount; i++){
                         
             X[i] =(int) (Math.round((Math.cos(angle + angleincrease) * radius)))+ midx;

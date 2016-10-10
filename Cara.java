@@ -18,6 +18,8 @@ public class Cara extends JPanel implements ActionListener {
     ArrayList<RandomShape> RandomShapes = new ArrayList<RandomShape>();
     int FrameWidth = 400;
     int FrameHeight = 300;
+    public static int colormean;
+    public static int colorstddev;
     public Cara() {
         setPreferredSize(new Dimension(FrameWidth,FrameHeight)); // make panel 400 by 300 pixels
         // ... 
@@ -45,17 +47,19 @@ public class Cara extends JPanel implements ActionListener {
         // clear the shapes list
         RandomShapes.clear();
         
-        // create random shapes 
-        int amntshapes =  0;
+        // create random shapes
+//        colormean =(int) random.nextGaussian()* 115;
+//        colorstddev =(int) random.nextInt(45);
+        int amntshapes =  random.nextInt(100) + 20;
         RandomShape shape;
         for (int i = 0; i <= amntshapes ;i ++){
             int shapechooser = random.nextInt(3);
             switch (shapechooser){
-                case 0: shape = new RandomCloud(FrameWidth,FrameHeight);
+                case 0: shape = new RandomPolygon(FrameWidth,FrameHeight);
                 break;
-                case 1: shape = new RandomCloud(FrameWidth,FrameHeight);
+                case 1: shape = new RandomGlobe(FrameWidth,FrameHeight);
                 break;
-                case 2: shape = new RandomCloud(FrameWidth,FrameHeight);
+                case 2: shape = new RandomStar(FrameWidth,FrameHeight);
                 break;
                 default: shape = new RandomStar(FrameWidth,FrameHeight);
                 

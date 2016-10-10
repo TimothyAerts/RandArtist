@@ -28,12 +28,14 @@ abstract class RandomShape {
         x = random.nextInt(maxX);
         y = random.nextInt(maxY);
         // initialize to a random color
+        //real random
         float r = random.nextFloat();
         float g = random.nextFloat();
         float b = random.nextFloat();
-        color = new Color(r,g,b);
-        
-        
+        float alpha = random.nextFloat();
+        color = new Color(r,g,b,alpha);
+        //gausian random
+
         
     }
     
